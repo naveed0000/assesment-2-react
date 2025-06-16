@@ -2,6 +2,7 @@ import { Box, Grid, Stack, Typography } from "@mui/material";
 import companyInfo from "../data/companyInfo";
 import ActionButtonsGroup from "./components/ActionButtonsGroup";
 import earthImage from "../assets/earthImage.jpg";
+import MotionNumber from "./components/useCountUp";
 export default function HeroSection() {
   return (
     <Grid
@@ -78,7 +79,7 @@ export default function HeroSection() {
                 }}
               >
                 <Typography variant="h4" sx={{ fontWeight: "500" }}>
-                  {item.value}
+                  <MotionNumber value={item.value} />
                 </Typography>
                 <Typography variant="h6">{item.desc}</Typography>
               </Stack>
