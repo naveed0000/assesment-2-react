@@ -9,6 +9,7 @@ import {
   IconButton,
   Menu,
   MenuItem,
+  Link,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import logoRed from "../assets/logo-red.png";
@@ -32,7 +33,8 @@ export default function Navbar() {
           py: 1,
           px: 2,
           display: "flex",
-          justifyContent: "space-between",
+          flexDirection: { xs: "column", sm: "row" },
+          justifyContent: { xs: "start", sm: "space-between" },
         }}
       >
         <Typography
@@ -41,7 +43,13 @@ export default function Navbar() {
         >
           World's Largest Medical Equipment Market Place
         </Typography>
-        <Box>
+        <Box
+          sx={{
+            display: { xs: "flex", sm: "block" },
+            gap: { sm: 2 },
+            // justifyContent: { xs: "start", sm: "center" },
+          }}
+        >
           <Button
             color="inherit"
             size="medium"
@@ -74,11 +82,13 @@ export default function Navbar() {
               maxWidth: 180,
             }}
           >
-            <img
-              src={logoRed}
-              alt="logo-white"
-              style={{ width: "100%", height: "100%", marginBottom: 24 }}
-            />
+            <Link href="#">
+              <img
+                src={logoRed}
+                alt="logo-white"
+                style={{ width: "100%", height: "100%", marginBottom: 24 }}
+              />
+            </Link>
           </Typography>
 
           {/* Desktop Menu (Right-aligned) */}

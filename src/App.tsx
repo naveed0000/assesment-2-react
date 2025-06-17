@@ -7,6 +7,7 @@ import GrowthToolsSection from "./sections/GrowthToolsSection";
 import TestimonialSlider from "./sections/TestimonialSlider";
 import Footer from "./sections/Footer";
 import Navbar from "./sections/Navbar";
+// import electronicImage from "../assets/electronic.jpg";
 
 function App() {
   const BannerInfoOne = {
@@ -35,7 +36,12 @@ function App() {
         {/* <SliderSection /> */}
         <TestimonialSlider />
       </Container>
-      <Banner title={bannerInfoTwo.title} actionButton={true} description="" />
+      <Banner
+        title={bannerInfoTwo.title}
+        actionButton={true}
+        description=""
+        withBackgroundImage={"../assets/electronic.jpg"}
+      />
       <Footer />
     </>
   );
