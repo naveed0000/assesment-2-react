@@ -36,12 +36,7 @@ function App() {
         {/* <SliderSection /> */}
         <TestimonialSlider />
       </Container>
-      <Banner
-        title={bannerInfoTwo.title}
-        actionButton={true}
-        description=""
-        withBackgroundImage={"../assets/electronic.jpg"}
-      />
+      <Banner title={bannerInfoTwo.title} actionButton={true} description="" />
       <Footer />
     </>
   );
